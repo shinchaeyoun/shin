@@ -4,190 +4,294 @@ $grey : #d3d3d3;
 $sub_grey: #5a5a5a;
 
 // 폰트변수
-$assistant : 'Assistant', sans-serif;
-$outfit : 'Outfit', sans-serif;
-$nanum : 'Nanum Myeongjo', serif;
+$assistant : 'Assistant',
+sans-serif;
+$outfit : 'Outfit',
+sans-serif;
+$nanum : 'Nanum Myeongjo',
+serif;
 
 #contact {
-      .inner_wrap {display: flex;}
-  
-      .submit_container {
-          margin: 50px 0;
-          padding: 50px 0;
-          position: relative;
-          display: flex;
-          flex-flow: column nowrap;
-          width: 50%;
-          input {
-            outline: none;
-            padding: 2px 10px;
-            border: 1px solid $grey;
-
-            margin-bottom: 20px;
-            width: 90%;
-            height: 30px;
-            box-sizing: border-box;
-            font-family: $outfit;
-            &::placeholder {color: $grey;}
-
-            opacity: 0;
-            transform: translateY(20px);
-            transition:.5s;
-            &.on {opacity: 1; transform: translateY(0);}
-            &#email{transition-delay: .2s;}
-          }
-  
-          textarea {
-            width: 90%;
-            border: 1px solid $grey;
-            outline: none;
-            padding: 10px;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-            font-family: $outfit;
-            &::placeholder {color: $grey;}
-
-            opacity: 0;
-            transform: translateY(20px);
-            transition:.5s;
-            transition-delay: .4s;
-            &.on {opacity: 1; transform: translateY(0);}
-          }
-  
-          button {
-              &:active, &:visited, a:hover {color: #222;}
-
-              width: 100px;
-              height: 30px;
-              border-radius: 25px;
-              background-color: $grey;
-              border: none;
-              &.active {color:#fff; background-color: $point;}
-
-              opacity: 0;
-              transform: translateY(20px);
-              transition:.5s;
-              transition-delay: .8s;
-              &.on {opacity: 1; transform: translateY(0);}
-          }
-  
-          &::after {
-              position: absolute;
-              width: 1px;
-              height: 100%;
-              top: 0;
-              right: 0;
-              background-color: $grey;
-              content: '';
-          }
-  
-          .thankyou_message {
-              padding-top: 100px;
-              width: 100%;
-              height: 250px;
-              font-size: 15px;
-              font-family: $outfit;
-              font-weight: 600;
-              text-align: center;
-              box-sizing: border-box;
-              &.active {color:$point;}
-          }
-      }
-  
-      .contact_container {
-        margin: 50px 0;
-        padding: 50px 0;
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-          > ul {
-              > li {
-                    font-family: $outfit;
-                    margin-bottom: 30px;
-                    text-align: center;
-
-                    &:nth-of-type(1){a{transition-delay: .2s;}}
-                    &:nth-of-type(2){span{transition-delay: .4s;}a{transition-delay: .6s;}}
-                    &:nth-of-type(3){span{transition-delay: .8s;}a{transition-delay: 1s;}}
-                    &:nth-of-type(4){span{transition-delay: 1.2s;}a{transition-delay: 1.4s;}}
-
-                    > span {
-                        font-weight: 600;
-                        display: block;
-                        opacity: 0;
-                        transform: translateY(20px);
-                        transition:.5s;
-                        &.active {color:$point;}
-                        &.on {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-
-                    a {
-                        display: block;
-                        opacity: 0;
-                        transform: translateY(20px);
-                        transition:.5s;
-                        &.on {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-                    
-                    .kakao {
-                        opacity: 0;
-                        position: relative;
-                        transition: .2s;
-                        &.active {opacity: 1;}
-                        li {
-                            position: absolute;
-                            top: 0; left: 50%;
-                            transform: translateX(-50%);
-                            width: 100px;
-                            height: 100px;                            
-                            img {width: 100%; height: 100%;}
-                        }
-                    }
-              }
-              .kakao_qr { a {cursor: pointer;}}
-          }
-      }
-  
+  .inner_wrap {
+    display: flex;
   }
 
-  @media screen and (max-width:480px) {
-      .inner_wrap {flex-direction:column;}
+  .submit_container {
+    margin: 50px 0;
+    padding: 50px 0;
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
 
-      .submit_container {
-        margin: 0 !important;
-        width: 100% !important;
+    input {
+      outline: none;
+      padding: 2px 10px;
+      border: 1px solid $grey;
 
-        form {padding: 0 20px !important;}
-        input {width: 100% !important;}
-        textarea {width: 100% !important;}
+      margin-bottom: 20px;
+      width: 90%;
+      height: 30px;
+      box-sizing: border-box;
+      font-family: $outfit;
 
-        &::after {
-            width: 100% !important;
-            height: 1px !important;
-            top: initial !important;
-            bottom: 0;
-            left: 0;
+      &::placeholder {
+        color: $grey;
+      }
+
+      opacity: 0;
+      transform: translateY(20px);
+      transition:.5s;
+
+      &.on {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      &#email {
+        transition-delay: .2s;
+      }
+    }
+
+    textarea {
+      width: 90%;
+      border: 1px solid $grey;
+      outline: none;
+      padding: 10px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      font-family: $outfit;
+
+      &::placeholder {
+        color: $grey;
+      }
+
+      opacity: 0;
+      transform: translateY(20px);
+      transition:.5s;
+      transition-delay: .4s;
+
+      &.on {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    button {
+
+      &:active,
+      &:visited,
+      a:hover {
+        color: #222;
+      }
+
+      width: 100px;
+      height: 30px;
+      border-radius: 25px;
+      background-color: $grey;
+      border: none;
+
+      &.active {
+        color: #fff;
+        background-color: $point;
+      }
+
+      opacity: 0;
+      transform: translateY(20px);
+      transition:.5s;
+      transition-delay: .8s;
+
+      &.on {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    &::after {
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: $grey;
+      content: '';
+    }
+
+    .thankyou_message {
+      padding-top: 100px;
+      width: 100%;
+      height: 250px;
+      font-size: 15px;
+      font-family: $outfit;
+      font-weight: 600;
+      text-align: center;
+      box-sizing: border-box;
+
+      &.active {
+        color: $point;
+      }
+    }
+  }
+
+  .contact_container {
+    margin: 50px 0;
+    padding: 50px 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    >ul {
+      >li {
+        font-family: $outfit;
+        margin-bottom: 30px;
+        text-align: center;
+
+        &:nth-of-type(1) {
+          a {
+            transition-delay: .2s;
+          }
+        }
+
+        &:nth-of-type(2) {
+          span {
+            transition-delay: .4s;
+          }
+
+          a {
+            transition-delay: .6s;
+          }
+        }
+
+        &:nth-of-type(3) {
+          span {
+            transition-delay: .8s;
+          }
+
+          a {
+            transition-delay: 1s;
+          }
+        }
+
+        &:nth-of-type(4) {
+          span {
+            transition-delay: 1.2s;
+          }
+
+          a {
+            transition-delay: 1.4s;
+          }
+        }
+
+        >span {
+          font-weight: 600;
+          display: block;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: .5s;
+
+          &.active {
+            color: $point;
+          }
+
+          &.on {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        a {
+          display: block;
+          opacity: 0;
+          transform: translateY(20px);
+          transition: .5s;
+
+          &.on {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .kakao {
+          opacity: 0;
+          position: relative;
+          transition: .2s;
+
+          &.active {
+            opacity: 1;
+          }
+
+          li {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
         }
       }
 
-      .contact_container {
-          width: 100% !important;
-          margin: 0 !important;
-          padding: 50px 0 0 !important;
-
-          .kakao {
-            &.active {margin-bottom: 130px;}
-          }
+      .kakao_qr {
+        a {
+          cursor: pointer;
+        }
       }
+    }
   }
 
-  @media screen and (min-width:480px) and (max-width:768px) {
-    .submit_container {padding: 50px 0 0 30px !important;}
+}
+
+@media screen and (max-width:480px) {
+  .inner_wrap {
+    flex-direction: column;
   }
+
+  .submit_container {
+    margin: 0 !important;
+    width: 100% !important;
+
+    form {
+      padding: 0 20px !important;
+    }
+
+    input {
+      width: 100% !important;
+    }
+
+    textarea {
+      width: 100% !important;
+    }
+
+    &::after {
+      width: 100% !important;
+      height: 1px !important;
+      top: initial !important;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .contact_container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 50px 0 0 !important;
+
+    .kakao {
+      &.active {
+        margin-bottom: 130px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:480px) and (max-width:768px) {
+  .submit_container {
+    padding: 50px 0 0 30px !important;
+  }
+}
