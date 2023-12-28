@@ -1,0 +1,89 @@
+#book-thumnail-top
+{
+	position:relative;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:135px;
+	color:#fff;
+	background:url(../images/viewer/thumnail_title.png) no-repeat;
+	background-size: 443px 70px;
+	background-position: 74px 35px;
+}
+
+#book-thumnail-top-title
+{
+	position: absolute;
+	top: 29px;
+	left: 80px;
+	width: 435px;
+	height: 68px;
+}
+
+#book-thumnail-middle
+{
+	position:relative;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:1269px;
+	background-color:rgba(0,0,0,0.5);
+	overflow-y:auto;
+	color:#fff;
+}
+
+#book-thumnail .book-popup-close-btn
+{
+	position:absolute;
+	top:50px;
+	right:70px;
+	width:36px;
+	height:36px;
+	cursor:pointer;
+	background-image:url(../images/viewer/close_btn_1.png);
+}
+
+.book-thumnail-obj
+{
+	display:inline-block;
+	position:relative;
+	width: 250px;
+	margin: 0px 25px !important;
+	margin-bottom: 10px !important;
+	text-align:center !important;
+	cursor:pointer;
+}
+.book-thumnail-obj-img
+{
+	display:inline-block;
+	position:relative;
+	top:0px;
+	left:0px;
+	width:250px;
+	height: 323px;
+	margin:0 auto;
+	border: 8px solid #828385;
+	box-sizing: border-box;
+
+	background-repeat: no-repeat;
+	background-size: 250px 323px;
+	background-color: #ffffff;
+}
+
+.book-thumnail-obj-img.cur
+{
+	border-color: #e91c44;
+}
+.book-thumnail-obj p
+{
+	display:block;
+	width:100%;
+	bottom:0px;
+	text-align:center;
+	font-size:60px;
+	font-weight:bold;
+	color:#fff;
+	margin:0 auto;
+	margin-top:5px;
+	text-shadow: 0 0 10px #1c6e6f, 0 0 10px #1c6e6f, 0 0 10px #1c6e6f, 0 0 10px #1c6e6f, 0 0 10px #1c6e6f;
+}
