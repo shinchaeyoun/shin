@@ -1,0 +1,166 @@
+html, body{position:absolute; width:initial; height:initial; margin:0; padding:0; background-color:#ffffff;  -webkit-overflow-scrolling:touch; }
+@media print
+{
+	*
+	{
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+    }
+}
+@page
+{
+	size: A4 portrait;
+	margin: 0;
+}
+.print-page
+{
+	column-count: 2;
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+
+	width: 21cm;
+	height: 29.7cm;
+	display: block;
+	margin: 0 auto;
+}
+.pack-box
+{
+	display:block;
+	width:100%;
+	margin:0 auto;
+}
+.page
+{
+	zoom:0.40;
+	height:50%;
+	display:block;
+	/* display:inline-block; */
+}
+.popup_view
+{
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+}
+.popup_view .popup_box
+{
+	box-shadow:none;
+}
+.popup_view.on
+{
+	outline:none;
+}
+/*
+.print-page:first-child
+{
+	column-count: 0;
+	-webkit-column-count: 0;
+	-moz-column-count: 0;
+}
+.print-page:first-child .page
+{
+	height: 80%;
+	background:red;
+	margin-top:50%;
+	display:inline-block;
+}*/
+
+/*
+
+
+#print-popup
+{
+	zoom:1;
+}
+.page
+{
+	zoom:0.35;
+}
+.print-page
+{
+	width:100%;
+	height:100%;
+	position:relative;
+	display:block;
+
+	page-break-before:always;
+}
+
+
+
+body {
+  background: rgb(204,204,204);
+}
+
+@media print {
+  body, .print-page {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+
+/*
+.page {
+	width: 21cm;
+	min-height: 29.7cm;
+	padding: 2cm;
+	margin: 1cm auto;
+	border-radius: 5px;
+	background: white;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+@media print { html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+	.print-page {
+		margin: 0;
+		border: initial;
+		border-radius: initial;
+		width: initial;
+		min-height: initial;
+		box-shadow: initial;
+		background: initial;
+		page-break-after: always;
+	}
+}
+body {
+  background: rgb(204,204,204);
+}
+.print-page[size="A4"] {
+  background: white;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+@media print {
+  body, .print-page[size="A4"] {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+/*
+@page
+{
+	size: A4 portrait;
+	margin: 0;
+	/ *size: landscape;* /
+}
+@media print
+{
+	.print-page
+	{
+		margin: 0;
+		border: initial;
+		border-radius: initial;
+		width: initial;
+		min-height: initial;
+		box-shadow: initial;
+		background: initial;
+		page-break-after: always;
+	}
+}*/
