@@ -4,7 +4,6 @@ body {
   padding: 0;
   color: white;
   background-size: 1700px;
-  background-repeat: no-repeat;
 }
 
 #weather {
@@ -30,6 +29,14 @@ body {
 #center #clock {
   font-size: 100px;
   font-weight: bold;
+}
+
+#quotes {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
 }
 
 input {
