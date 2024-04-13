@@ -1,0 +1,43 @@
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-size: 1700px;
+  background-repeat: no-repeat;
+}
+
+#weather {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#weather div {
+  text-align: center;
+}
+#weather div .city {
+  font-size: 12px;
+}
+#weather div .temp {
+  font-size: 50px;
+  margin-bottom: -10px;
+}
+
+#center {
+  height: 100vh;
+  text-align: center;
+}
+#center #clock {
+  font-size: 100px;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 2px solid #000;
+  background-color: #eee;
+}
+input:focus {
+  outline: none;
+}/*# sourceMappingURL=style.css.map */

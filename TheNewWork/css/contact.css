@@ -69,7 +69,8 @@
   transition: 0.5s;
   transition-delay: 0.8s;
 }
-#contact .submit_container button:active, #contact .submit_container button:visited, #contact .submit_container button a:hover {
+#contact .submit_container button:active, #contact .submit_container button:visited,
+#contact .submit_container button a:hover {
   color: #222;
 }
 #contact .submit_container button.active {

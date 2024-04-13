@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>s - momentum</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-  
+  <div id="weather">
+    <div>
+      <div class="city"></div>
+      <div class="temp"></div>
+      <div class="description"></div>
+      <span class="temp-max"></span>
+      <span class="temp-min"></span>
+    </div>
+  </div>
+
+  <div id="center">
+    <div id="current-date"></div>
+    <div id="current-date-kr"></div>
+    <div id="clock"></div>
+
+    <form id="login-form">
+      <input id="box" type="text" placeholder="Please write your name" required maxlength="15">
+      <button id="button">Log In</button>
+    </form>
+
+    <form id="todo-form">
+      <div>What's your main focus for today?</div>
+      <input id="form" required type="text">
+    </form>
+
+    <div id="quotes">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+
+
+  <script src="./js/background.js"></script>
+  <script src="./js/weather.js"></script>
+  <script src="./js/dateClock.js"></script>
+  <script src="./js/quotes.js"></script>
 </body>
+
 </html>

@@ -70,6 +70,28 @@ body {
   }
 }
 
+#bg_blur {
+  width: 100vw;
+  height: 300vh;
+  filter: blur(10px);
+}
+
+#bg_txt {
+  width: 100vw;
+  height: 300vh;
+}
+#bg_txt h2 {
+  font-size: 42px;
+}
+#bg_txt p {
+  font-size: 14px;
+}
+#bg_txt div {
+  width: 800px;
+  font-size: 18px;
+  border-bottom: 1px solid #000;
+}
+
 .scroll_ani {
   position: fixed;
   bottom: 30px;
