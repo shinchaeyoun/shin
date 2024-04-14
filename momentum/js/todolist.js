@@ -1,16 +1,18 @@
 // todoForm은 greeting.js에서 선언했음
-// const todoForm = document.querySelector('#todo-form');
+const TODOS_KEY = 'todos';
+
+const todoForm = document.querySelector('#todo-form');
 const todoInput = todoForm.querySelector('input');
 const todolist = document.querySelector('#todo-list');
+const todoLenght = document.querySelector('#todoLength');
 
 let todos = [];
-
-const TODOS_KEY = 'todos';
+let tasks;
 
 function saveTodo(){
   localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
-
-  console.log(todos);
+  tasks = todos.filter((todo) => !todo.active );
+  todoLenght.innerHTML = `(${tasks.length})`;
 };
 
 function submitTodo(e){
@@ -21,17 +23,18 @@ function submitTodo(e){
     text: newTodo,
     id: Date.now(),
     inputId: Date.now() - 1,
+    active: false,
   };
+
   todos.push(newTodoObj);
   paintTodo(newTodoObj);
   saveTodo();
-
-  console.log(newTodoObj.inputId,'newTodoObj.inputId');
 };
 
 function paintTodo(newTodo){
   const li = document.createElement('li');
   li.id = newTodo.id;
+  li.checked = newTodo.active;
 
   const span = document.createElement('span');
   const checkbox = document.createElement('input');
@@ -44,7 +47,7 @@ function paintTodo(newTodo){
   label.htmlFor = newTodo.inputId;
   deleBtn.innerText = '✕'
 
-  checkbox.addEventListener('click', lineThrough);
+  checkbox.addEventListener('click', clickActive);
   deleBtn.addEventListener('click', deleteTodo);
 
   li.appendChild(checkbox);
@@ -52,12 +55,23 @@ function paintTodo(newTodo){
   li.appendChild(span);
   li.appendChild(deleBtn);
   todolist.appendChild(li);
+
+  if(newTodo.active){
+    checkbox.checked = newTodo.active;
+    li.classList.add('active');
+  };
 };
 
-function lineThrough(e){
+function clickActive(e){
   const item = e.target.parentElement;
-  item.classList.toggle('line');
+  item.classList.toggle('active');
+
+  const index = todos.findIndex(obj => obj.id == item.id);
+  todos[index].active = !todos[index].active;
+
+  saveTodo();
 };
+
 function deleteTodo(e){
   const deleLi = e.target.parentElement;
   deleLi.remove();
@@ -72,5 +86,8 @@ const savedTodos = localStorage.getItem(TODOS_KEY);
 if (savedTodos !== null){
   const parsedTodos = JSON.parse(savedTodos);
   todos = parsedTodos;
+  tasks = parsedTodos.filter((task)=>!task.active);
   parsedTodos.forEach(paintTodo);
+
+  todoLenght.innerHTML = `(${tasks.length})`;
 };
