@@ -35,6 +35,12 @@ body {
     font-size: 100px;
     font-weight: bold;
   }
+
+  // dlatl
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #quotes {
@@ -48,10 +54,70 @@ body {
 input {
   padding: 10px 15px;
   border: none;
-  border-bottom: 2px solid #000;
-  background-color: #eee;
+  border-bottom: 2px solid #fff;
+  background-color: initial;
+
+  color: #fff;
 
   &:focus {
     outline: none;
+  }
+  &::placeholder {
+    color: #ffffffa6;
+  }
+}
+
+.hidden {
+  display: none;
+}
+#login-form {
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+  }
+}
+#todo-list{
+  li {
+    list-style: none;
+    &.line {
+      text-decoration: line-through;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      font-size: 15px;
+      color: white; // dlatl
+    }
+
+    input{
+      display:none;
+      }
+    
+    input + label{
+      margin-right: 10px;
+      cursor:pointer;
+     }
+    
+    /* label:before에 체크하기 전 상태 CSS */
+    input + label:before{
+      content:"";
+      display:inline-block;
+      width:17px;
+      height:17px;
+      border:2px solid #d0021b;
+      border-radius: 50%;
+      vertical-align:middle;
+      }
+      
+    /* label:before에 체크 된 상태 CSS */  
+    input:checked + label:before{
+      content:"✔︎";
+      font-size: 15px;
+      background-color:#d0021b;
+      border-color:#d0021b;
+      // border-color:#F47C7C;
+      }
   }
 }

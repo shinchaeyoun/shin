@@ -15,7 +15,7 @@ function handleClock(){
 
     currentDate.innerText = `${week[date.getDay()]} ${date.getDate()} ${month[date.getMonth()]}`
 
-    currentDateKr.innerText = `${date.getMonth() + 1}월 ${date.getDate()}일 ${weekKr[date.getDay()]}`
+    // currentDateKr.innerText = `${date.getMonth() + 1}월 ${date.getDate()}일 ${weekKr[date.getDay()]}`
 
     clock.innerText = `${hours}:${minutes}:${seconds}`;
 }

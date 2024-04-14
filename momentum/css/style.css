@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   position: relative;
   margin: 0;
@@ -25,6 +26,10 @@ body {
 #center {
   height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #center #clock {
   font-size: 100px;
@@ -42,9 +47,63 @@ body {
 input {
   padding: 10px 15px;
   border: none;
-  border-bottom: 2px solid #000;
-  background-color: #eee;
+  border-bottom: 2px solid #fff;
+  background-color: initial;
+  color: #fff;
 }
 input:focus {
   outline: none;
+}
+input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6509803922);
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6509803922);
+}
+
+.hidden {
+  display: none;
+}
+
+#login-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+}
+
+#todo-list li {
+  list-style: none;
+  /* label:before에 체크하기 전 상태 CSS */
+  /* label:before에 체크 된 상태 CSS */
+}
+#todo-list li.line {
+  text-decoration: line-through;
+}
+#todo-list li button {
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  color: white;
+}
+#todo-list li input {
+  display: none;
+}
+#todo-list li input + label {
+  margin-right: 10px;
+  cursor: pointer;
+}
+#todo-list li input + label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #d0021b;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+#todo-list li input:checked + label:before {
+  content: "✔︎";
+  font-size: 15px;
+  background-color: #d0021b;
+  border-color: #d0021b;
 }/*# sourceMappingURL=style.css.map */

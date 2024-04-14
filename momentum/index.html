@@ -24,15 +24,18 @@
     <div id="current-date-kr"></div>
     <div id="clock"></div>
 
-    <form id="login-form">
-      <input id="box" type="text" placeholder="Please write your name" required maxlength="15">
-      <button id="button">Log In</button>
+    <form id="login-form" class="hidden">
+      <input id="box" type="text" placeholder="Please write your name" required maxlength="15" autocomplete="off">
+      <button id="button">LOGIN</button>
     </form>
 
-    <form id="todo-form">
+    <h1 id="greeting" class="hidden"></h1>
+
+    <form id="todo-form" class="hidden">
       <div>What's your main focus for today?</div>
-      <input id="form" required type="text">
+      <input id="form" required type="text" autocomplete="off">
     </form>
+    <ul id="todo-list"></ul>
 
   </div>
 
@@ -46,6 +49,8 @@
   <script src="./js/background.js"></script>
   <script src="./js/weather.js"></script>
   <script src="./js/dateClock.js"></script>
+  <script src="./js/greeting.js"></script>
+  <script src="./js/todolist.js"></script>
   <script src="./js/quotes.js"></script>
 </body>
 

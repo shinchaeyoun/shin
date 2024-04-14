@@ -6,6 +6,7 @@ const dc = document.querySelector('.description');
 const tempMax = document.querySelector('.temp-max');
 const tempMin = document.querySelector('.temp-min');
 
+const fail = () => {};
 const success = (position) => {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
@@ -19,8 +20,6 @@ const getWeather = (lat, lon) => {
   )
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
-
     city.innerText = `${data.name}`;
     temp.innerText = `${Math.round(data.main.temp)}°`;
     dc.innerText = `${data.weather[0].main}`;
@@ -28,7 +27,5 @@ const getWeather = (lat, lon) => {
     tempMin.innerText = `L:${Math.round(data.main.temp_min)}°`;
   })
 };
-
-const fail = () => {};
 
 navigator.geolocation.getCurrentPosition(success, fail);
