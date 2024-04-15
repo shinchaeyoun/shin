@@ -2,6 +2,7 @@ const loginForm = document.querySelector('#login-form');
 const input = loginForm.querySelector('input');
 const greeting = document.querySelector('#greeting');
 const g_todoForm = document.querySelector('#todo-form');
+const g_todoInput = g_todoForm.querySelector('input');
 const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
 const savedUsername = localStorage.getItem(USERNAME_KEY);
@@ -22,6 +23,7 @@ function greetingSetting (username){
   const span = document.createElement('span');
   span.id = 'todoLength'
   greeting.appendChild(span);
+  g_todoInput.focus();
 };
 
 if (savedUsername === null) {
