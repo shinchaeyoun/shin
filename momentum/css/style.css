@@ -31,6 +31,7 @@ body {
   font-family: "Outfit", "Noto Sans KR";
   font-size: 14px;
   background-size: 1700px;
+  background-position-x: center;
 }
 
 #weather {
