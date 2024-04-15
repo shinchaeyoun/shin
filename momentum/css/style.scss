@@ -1,14 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR&family=Outfit:wght@100..900&display=swap');
+
+.hidden {
+  display: none;
+}
+
+input {
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background-color: initial;
+
+  color: #fff;
+
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #ffffffa6;
+  }
+}
+
 body {
   position: relative;
 
   margin: 0; padding: 0;
 
   color: white;
-  
-  background-size: 1700px;
-  // background-position: center;
-};
+  font-family: "Outfit", "Noto Sans KR";
+  font-size: 14px;
 
+  background-size: 1700px;
+};
 
 #weather {
   position: absolute;
@@ -28,7 +52,6 @@ body {
 }
 
 #center {
-  // height: 100vh;
   padding: 150px 0 100px;
   text-align: center;
 
@@ -40,38 +63,11 @@ body {
     font-size: 100px;
     font-weight: bold;
   }
-
-  #greeting {
-    position: relative;
-    span {
-      font-size: 19px;
-    }
-  }
-}
-
-
-
-input {
-  padding: 10px 15px;
-  border: none;
-  border-bottom: 2px solid #fff;
-  background-color: initial;
-
-  color: #fff;
-
-  &:focus {
-    outline: none;
-  }
-  &::placeholder {
-    color: #ffffffa6;
-  }
-}
-
-.hidden {
-  display: none;
 }
 
 #login-form {
+  margin-top: 60px;
+
   button {
     padding: 10px 20px;
     border: none;
@@ -79,9 +75,23 @@ input {
   }
 }
 
+#greeting {
+  position: relative;
+  span {
+    font-size: 19px;
+  }
+}
+
+#todo-form {
+  input#form {
+    width: 200px;
+  }
+}
 #todo-list{
+  padding: 0px;
+
   li {
-    margin: 5px 0px;
+    margin: 15px 0px;
     list-style: none;
     &.active {
       text-decoration: line-through;
@@ -102,7 +112,7 @@ input {
 
     input{
       display:none;
-      }
+    }
     
     input + label{
       margin-right: 10px;
@@ -117,14 +127,14 @@ input {
       height:17px;
       border:2px solid #fff;
       border-radius: 50%;
-      vertical-align:middle;
+      vertical-align: top;
       }
       
     /* label:before에 체크 된 상태 CSS */  
     input:checked + label:before{
       content:"✔︎";
       color: #fff;
-      font-size: 15px;
+      font-size: 13px;
       background-color:#d8d8d8;
       border-color:#d8d8d8;
       // border-color:#d0021b;
@@ -134,6 +144,15 @@ input {
 }
 
 #quotes {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+  font-family: "Noto Serif KR";
+  font-style: italic;
   text-align: center;
+
+  div {
+    &:last-child {
+      margin-top: 5px;
+      font-size: 13px;
+    }
+  }
 }

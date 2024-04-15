@@ -18,7 +18,7 @@ function loginFn (e) {
 function greetingSetting (username){
   greeting.classList.remove(HIDDEN_CLASSNAME);
   g_todoForm.classList.remove(HIDDEN_CLASSNAME);
-  greeting.innerText = `${username}'s Todo-List`
+  greeting.innerText = `${username}'s TASKS`
   const span = document.createElement('span');
   span.id = 'todoLength'
   greeting.appendChild(span);

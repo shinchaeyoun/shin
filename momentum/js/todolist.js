@@ -1,4 +1,3 @@
-// todoForm은 greeting.js에서 선언했음
 const TODOS_KEY = 'todos';
 
 const todoForm = document.querySelector('#todo-form');
@@ -9,10 +8,11 @@ const todoLenght = document.querySelector('#todoLength');
 let todos = [];
 let tasks;
 
+
 function saveTodo(){
   localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
   tasks = todos.filter((todo) => !todo.active );
-  todoLenght.innerHTML = `(${tasks.length})`;
+  todoLenght.innerHTML = ` (${tasks.length})`;
 };
 
 function submitTodo(e){
@@ -79,6 +79,7 @@ function deleteTodo(e){
   saveTodo();
 };
 
+
 todoForm.addEventListener('submit', submitTodo);
 
 const savedTodos = localStorage.getItem(TODOS_KEY);
@@ -89,5 +90,5 @@ if (savedTodos !== null){
   tasks = parsedTodos.filter((task)=>!task.active);
   parsedTodos.forEach(paintTodo);
 
-  todoLenght.innerHTML = `(${tasks.length})`;
+  todoLenght.innerHTML = ` (${tasks.length})`;
 };
