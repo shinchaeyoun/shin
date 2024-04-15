@@ -47,7 +47,7 @@ body {
 }
 #weather div .temp {
   font-size: 50px;
-  margin-bottom: -10px;
+  margin: -10px 0;
 }
 
 #center {
