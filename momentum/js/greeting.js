@@ -21,7 +21,8 @@ function greetingSetting (username){
   g_todoForm.classList.remove(HIDDEN_CLASSNAME);
   greeting.innerText = `${username}'s TASKS`
   const span = document.createElement('span');
-  span.id = 'todoLength'
+  span.id = 'todo-length'
+  span.innerText = ' (0)'
   greeting.appendChild(span);
   g_todoInput.focus();
 };

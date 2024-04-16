@@ -3,7 +3,7 @@ const TODOS_KEY = 'todos';
 const todoForm = document.querySelector('#todo-form');
 const todoInput = todoForm.querySelector('input');
 const todolist = document.querySelector('#todo-list');
-const todoLenght = document.querySelector('#todoLength');
+const todoLenght = document.querySelector('#todo-length');
 
 let todos = [];
 let tasks;
@@ -91,4 +91,9 @@ if (savedTodos !== null){
   parsedTodos.forEach(paintTodo);
 
   todoLenght.innerHTML = ` (${tasks.length})`;
+
+  console.log('start if',tasks.length);
+} else {
+  console.log(savedTodos,'start else');
+  // todoLenght.innerHTML = ` (${tasks.length})`;
 };
