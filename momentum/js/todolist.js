@@ -91,9 +91,4 @@ if (savedTodos !== null){
   parsedTodos.forEach(paintTodo);
 
   todoLenght.innerHTML = ` (${tasks.length})`;
-
-  console.log('start if',tasks.length);
-} else {
-  console.log(savedTodos,'start else');
-  // todoLenght.innerHTML = ` (${tasks.length})`;
 };
