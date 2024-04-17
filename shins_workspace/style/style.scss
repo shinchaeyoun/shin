@@ -1,0 +1,131 @@
+$point : #d0021b;
+
+body {
+  position: relative;
+};
+
+.wrap {
+  display: flex;
+  padding: 10px 30px;
+}
+
+section {
+  min-height: 100vh;
+
+  background-color: #f2f2f2;
+}
+
+aside {
+  position: sticky;
+  top: 10px;
+  width: 8rem;
+  height: 100%;
+  
+  .logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  nav {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    .gnb {
+      .lnb {
+        margin-left: 20px;
+        font-size: 1.1rem;
+      }
+    }
+
+    div {
+      display: inline;
+      &.active {
+        position: relative;
+        font-weight: 700;
+        &::before{
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #d0021b;
+        }
+      }
+    }
+  }
+};
+
+main {
+  background-color: #ffd2d2;
+  width: calc(100% - 8rem);
+}
+
+section {
+  &.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 100px;
+    padding-right: 30px;
+    min-height: calc(100vh - 10px);
+    
+    background-color: #fbdbdb; // dlatl
+
+    div {
+      font-size: 4rem;
+      font-weight: 700;
+      &:first-child {
+      }
+
+      &:last-child {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &.project {
+    padding-top: 40px;
+    
+    .intro {
+      margin: 80px auto;
+      width: 32rem;
+      text-align: center;
+    }
+    .content {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      .title {
+        font-weight: 600;
+        font-size: 1.6rem;
+      }
+      .sub-title {
+
+      }
+      .text-container {
+        align-self: end;
+        margin-bottom: 10px;
+        
+        .tit {
+          font-weight: 600;
+          color: $point;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 420px auto;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+
+  .grid-item {
+    &:first-child {background-color: #d5d5d5;}
+    // &:last-child {background-color: #b7b7b7;}
+  }
+}

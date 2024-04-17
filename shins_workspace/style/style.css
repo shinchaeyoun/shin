@@ -1,0 +1,108 @@
+body {
+  position: relative;
+}
+
+.wrap {
+  display: flex;
+  padding: 10px 30px;
+}
+
+section {
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+aside {
+  position: sticky;
+  top: 10px;
+  width: 8rem;
+  height: 100%;
+}
+aside .logo {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+aside nav {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+aside nav .gnb .lnb {
+  margin-left: 20px;
+  font-size: 1.1rem;
+}
+aside nav div {
+  display: inline;
+}
+aside nav div.active {
+  position: relative;
+  font-weight: 700;
+}
+aside nav div.active::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #d0021b;
+}
+
+main {
+  background-color: #ffd2d2;
+  width: calc(100% - 8rem);
+}
+
+section.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 100px;
+  padding-right: 30px;
+  min-height: calc(100vh - 10px);
+  background-color: #fbdbdb;
+}
+section.main div {
+  font-size: 4rem;
+  font-weight: 700;
+}
+section.main div:last-child {
+  margin-top: 30px;
+}
+section.project {
+  padding-top: 40px;
+}
+section.project .intro {
+  margin: 80px auto;
+  width: 32rem;
+  text-align: center;
+}
+section.project .content {
+  margin-bottom: 30px;
+}
+section.project .content:last-child {
+  margin-bottom: 0px;
+}
+section.project .content .title {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+section.project .content .text-container {
+  align-self: end;
+  margin-bottom: 10px;
+}
+section.project .content .text-container .tit {
+  font-weight: 600;
+  color: #d0021b;
+  margin-top: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 420px auto;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+.grid-container .grid-item:first-child {
+  background-color: #d5d5d5;
+}/*# sourceMappingURL=style.css.map */
