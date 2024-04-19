@@ -1,22 +1,38 @@
+.bd2p {
+  border: 2px solid #d0021b;
+}
+
+.bd1p {
+  border: 1px solid #d0021b;
+}
+
 body {
   position: relative;
 }
 
 .wrap {
   display: flex;
-  padding: 10px 30px;
+  padding: 0 30px;
+  flex-wrap: wrap;
 }
 
 section {
+  margin-top: 120px;
   min-height: 100vh;
-  background-color: #f2f2f2;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-size: 2rem;
 }
 
 aside {
   position: sticky;
   top: 10px;
-  width: 8rem;
+  width: 12rem;
   height: 100%;
+  z-index: 999;
 }
 aside .logo {
   font-size: 2.5rem;
@@ -48,8 +64,7 @@ aside nav div.active::before {
 }
 
 main {
-  background-color: #ffd2d2;
-  width: calc(100% - 8rem);
+  width: calc(100% - 12rem);
 }
 
 section.main {
@@ -60,7 +75,6 @@ section.main {
   padding-bottom: 100px;
   padding-right: 30px;
   min-height: calc(100vh - 10px);
-  background-color: #fbdbdb;
 }
 section.main div {
   font-size: 4rem;
@@ -87,6 +101,16 @@ section.project .content .title {
   font-weight: 600;
   font-size: 1.6rem;
 }
+section.project .content .grid-container {
+  grid-template-columns: 2fr 1fr;
+}
+section.project .content .img {
+  width: 100%;
+  overflow-y: scroll;
+}
+section.project .content .img img {
+  width: 100%;
+}
 section.project .content .text-container {
   align-self: end;
   margin-bottom: 10px;
@@ -96,13 +120,131 @@ section.project .content .text-container .tit {
   color: #d0021b;
   margin-top: 20px;
 }
+section.project .content.ani-group .grid-container {
+  grid-auto-rows: minmax(400px, auto);
+  grid-template-rows: initial;
+  grid-template-columns: repeat(3, minmax(100px, auto));
+}
+section.project .content.ani-group .grid-container .grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+section.project .content.ani-group .grid-container .grid-item div {
+  width: calc(100% - 20px);
+}
+section.project .content.ani-group .grid-container .grid-item .screen {
+  height: 70%;
+  background-color: pink;
+}
+section.project .content.ani-group .grid-container .grid-item .detail {
+  padding: 10px;
+  height: 30%;
+}
+section.project .content.ani-group .grid-container .grid-item .detail .tit {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+section.career {
+  padding-top: 50px;
+}
+section.career .content .title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+section.career .content .subtitle {
+  color: #d0021b;
+}
+section.career .content .grid-container {
+  grid-template-rows: 100px auto;
+  gap: 30px 15px;
+}
+section.about .grid-container {
+  grid-template-rows: minmax(100vh, auto);
+  gap: 50px;
+}
+section.about .grid-container .grid-item {
+  margin: 30px 0;
+}
+section.about .grid-container .grid-item ul {
+  margin: 80px 0 50px;
+}
+section.about .grid-container .grid-item ul li {
+  margin-bottom: 20px;
+}
+section.about .grid-container .grid-item ul li:last-child {
+  margin-bottom: 0;
+}
+section.about .grid-container .grid-item ul li .tit {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+section.about .grid-container .grid-item ul li:first-child p {
+  display: grid;
+  grid-template-columns: 0.3fr 1.7fr;
+  grid-template-rows: auto;
+}
+section.about .grid-container .grid-item:first-child {
+  align-self: center;
+}
+section.about .grid-container .grid-item:last-child {
+  background-image: url("../img/about/1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+section.about .grid-container .grid-item .resume {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+section.about .grid-container .grid-item .resume svg {
+  vertical-align: text-top;
+}
 
 .grid-container {
   display: grid;
-  grid-template-rows: 420px auto;
-  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 450px auto;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
+  margin-top: 10px;
 }
-.grid-container .grid-item:first-child {
-  background-color: #d5d5d5;
+.contact {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.contact .grid-container {
+  grid-template-rows: 100vh auto;
+  grid-template-columns: 2fr 1fr;
+  gap: 0 10px;
+  margin-top: 0;
+}
+.contact .grid-container .grid-item {
+  align-self: end;
+  padding-bottom: 30px;
+}
+.contact .grid-container .grid-item:first-child div:first-child {
+  margin-bottom: -2rem;
+  font-size: 5rem;
+}
+.contact .grid-container .grid-item:first-child div#myName {
+  font-size: 8rem;
+  font-weight: 900;
+}
+.contact .grid-container .grid-item:first-child div#myName p {
+  margin-bottom: -5rem;
+}
+.contact .grid-container .grid-item:first-child div#myName.active {
+  color: #d0021b;
+}
+.contact .grid-container .grid-item:last-child {
+  margin-bottom: 30px;
+  line-height: 1;
+  justify-self: end;
 }/*# sourceMappingURL=style.css.map */
