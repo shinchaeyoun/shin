@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face { 
+  font-family: Oriya MN; 
+  font-style: normal; 
+  font-weight: 700; 
+  src: url(../font/Oriya-MN.ttf) format("truetype")
+}
+@font-face { 
+  font-family: Mermaid; 
+  font-style: normal; 
+  font-weight: 700; 
+  src: url(../font/Mermaid1001.ttf) format("truetype")
+}
+
+// colors
+$basic: #707070;
+$point: #dd1818;
+
+// fonts
+$outfit: 'Outfit', sans-serif;
+$oriya: 'Oriya Mn';
+$mermaid: 'Mermaid';

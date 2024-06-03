@@ -20,7 +20,7 @@ let randomImg = imgArr[Math.floor(Math.random() * imgArr.length)];
 
 $(function(){
 
-  aboutImg.on('mouseover mouseleave', function (){
+  aboutImg.on('mouseover', function (){
     randomImg = imgArr[Math.floor(Math.random() * imgArr.length)];
     $(this).css({backgroundImage: `url(${randomImg})`})
   });

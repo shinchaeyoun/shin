@@ -1,0 +1,132 @@
+@import './_variable.scss';
+
+
+
+.double-line {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background-color: $basic;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $basic;
+  }
+}
+
+.point-color {
+  color: $point;
+}
+
+.bd {
+  border: 1px solid $basic;
+}
+.bd-b {
+  border-bottom: 1px solid $basic;
+}
+.bd-r {
+  border-right: 1px solid $basic;
+}
+.bd-l {
+  border-left: 1px solid $basic;
+}
+.bd-t {
+  border-top: 1px solid $basic;
+}
+.w100 {
+  width: 100%;
+}
+.flex {
+  display: flex;
+}
+.fd-c {
+  flex-direction: column;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.jcc {
+  justify-content: center;
+}
+.aic {
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  // grid-template-rows: repeat(auto-fill, minmax(50px, auto));
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-item {
+  width: 100%;
+
+
+  &.grid-bd {
+    padding: 5px 0;
+    border-right: 1px solid $basic;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.grid-center {
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+
+section {
+  margin-bottom: 120px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-title {
+  position: sticky;
+  top: 0;
+  
+  padding-top: 14px;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 18px;
+  font-family: $oriya;
+  
+  background-color: #fff;
+  border-bottom: 1px solid #707070;
+  
+  z-index: 100;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -5px;
+    width: 100%; height: 1px;
+    background-color: #707070;
+  }
+}
+
+.hide-title {
+  position: absolute;
+	left: -9999px;
+}
+
+
+
+.max767 {
+  display: none;
+}
+
+.min768 {
+  
+}

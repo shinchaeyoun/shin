@@ -1,0 +1,388 @@
+@import './_variable.scss';
+
+.frame {
+  position: fixed;
+
+  width: 100vw; height: 100vh;
+
+  border: 20px solid #fff;
+
+  z-index: 999;
+  clip-path: polygon(0% 0%, 0px 100%, 22px 100%, 22px 22px, calc(100vw - 22px) 22px, calc(100vw - 22px) calc(100vh - 22px), 0% calc(100vh - 22px), 0% 100%, 100% 100%, 100% 0%)
+}
+
+.frame-inner {
+  padding: 30px;
+  // padding-right: 15px;
+}
+
+.inner-frame {
+  border: 2px solid $point;
+  width: 100%; height: 100%;
+}
+
+.wrap {
+  grid-template-columns: 150px 1fr;
+  position: relative;
+}
+
+nav {
+  font-size: 16px;
+  font-weight: 600;
+  > * {
+    position: fixed;
+  }
+
+  .logo {
+    font-size: 18px;
+    line-height: 1;
+    z-index: 999;
+  }
+
+  ul {
+    padding-top: 80px;
+     li {
+      &.active {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+
+          width: 130%;
+          height: 2px;
+
+          background-color: $point;
+          z-index: -1;
+        }
+      }
+     }
+  }
+
+  #arrow {
+    bottom: 50px;
+    left: calc(150px / 2 + 15px);
+    width: 1px;
+    height: 50px;
+    background-color: #707070;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 15px; height: 15px;
+      border-top: 1px solid #707070;
+      border-right: 1px solid #707070;
+      transform: rotate(315deg) translate(-7px, -4px);
+    }
+  }
+}
+
+section#main {
+  display: none;
+  height: calc(100vh - 60px);
+  background-color: #fff;
+
+}
+
+section#about-me {
+  padding-top: 30px;
+  height: calc(100vh - 60px);
+  .grid-container {
+    gap: 20px;
+    height: 100%;
+    
+
+    .grid-item {
+      &.img-block {
+        height: 420px;
+        background-image: url(../img/01.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      &.text-block {
+        .content {
+          margin-top: 30px;
+
+          .tit {
+            font-size: 16px;
+            font-weight: 600;
+          }
+          
+          &.header {
+            margin-top: 0;
+            font-size: 36px;
+          }
+
+          &.introduce {
+          }
+
+          &.profile, &.licens {
+            ul {
+              display: flex;
+              ol {
+                &:first-child {
+                  width: 20%;
+                  font-weight: 600;
+                }
+                &:last-child {width: 80%;}
+                li {
+
+                }
+              }
+            }
+          }
+
+          &.skills {
+            span {
+              margin-right: 10px;
+              &:last-child {margin-right: 0;}
+            }
+          }
+
+          &.licens {
+
+          }
+        }
+      }
+    }
+  }
+} // section#about-me
+
+section#project {
+  .tab-menu {
+    margin-bottom: 60px;
+    color: #bbb;
+
+    ul {
+      li {
+        margin: 0 20px;
+        &.active {
+          color: initial;
+        }
+      }
+    }
+    
+  }
+
+  .project-wrap {
+    > div {
+      &:first-child {
+        margin-bottom: 120px;
+      }
+    }
+  }
+
+  .grid-container {
+    grid-template-columns: 2fr 1fr;
+    align-items: end;
+    gap: 60px 20px;
+
+    transition: all .2s;
+
+    &.site {
+      .img-block {
+        height: 460px;
+        overflow: scroll;
+  
+        img{
+          width: 100%;
+          // height: 100%;
+        }
+      }
+      .text-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+  
+        .page-title {
+          p {
+            &:first-child {
+              font-size: 24px;
+              font-weight: 600;
+            }
+  
+            &:last-child {
+  
+            }
+          }
+        }
+  
+        .content {
+  
+          .tit {
+            margin-top: 20px;
+            font-weight: 600;
+            color: $point;
+          }
+        }
+        p {
+  
+        }
+      }
+    }
+
+    &.function {
+      // grid-template-rows: minmax(520px, auto);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+
+      .grid-item {
+        height: 480px;
+      }
+    }
+  }
+} // section#project
+
+section#career {
+  .grid-container {
+    gap: 60px 20px;
+  }
+
+  .company {
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .subTitle {
+      // font-weight: 600;
+      color: $point;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+  }
+} // section#career
+
+section#contact {
+  height: calc(100vh - 60px);
+  
+  .content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+
+    div {
+      font-size: 16px;
+      &:first-child {
+        span {
+          margin-right: 10px;
+          font-weight: 600;
+        }
+      }
+      &:last-child {
+        font-size: 64px;
+        font-weight: 800;
+        p:last-child {
+          font-size: 84px;
+          span {
+            display: block;
+            margin-bottom: -30px;
+          }
+        }
+      }
+    }
+  }
+
+} //section#contact
+
+
+
+@media (min-width:768px) and (max-width:1024px) {
+  .wrap {
+  }
+}
+
+@media (max-width: 767px) {
+  .wrap {
+    padding-top: 20px;
+
+    display: block;
+
+  }
+
+  nav {
+    display: flex;
+    position: sticky;
+    top: 20px;
+    
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    width: 100%; height: 100%;
+    
+    > * {
+      position: initial;
+    }
+
+    .logo {
+      width: 25%;
+    }
+    
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      padding-top: 0;
+      width: 75%;
+    }
+
+    #arrow {
+      position: fixed;
+      bottom: 40px;
+      left: calc(100% - 80px);
+
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 2px 2px 4px 0px #70707040;
+      border: 1px solid #7070701f;
+
+      &::before {
+        content: "";
+        width: 1px;
+        height: 20px;
+        display: block;
+        background-color: #707070;
+        position: absolute;
+        left: 50%;
+        top: 10px;
+      }
+
+      &::after {
+        top: 10px;
+        left: 21.5px;
+        width: 10px; height: 10px;
+      }
+    }
+  }
+
+  section#about-me .grid-container {
+    grid-template-columns: 1fr;
+
+    .grid-item {
+      &.img-block {
+        height: 260px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    background-color: rgb(138, 222, 135);
+    position: relative;
+  }
+
+  
+}
